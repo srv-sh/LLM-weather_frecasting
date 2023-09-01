@@ -228,3 +228,25 @@ agent.agent.llm_chain.prompt = new_prompt
 The new_prompt is created by combining the system message (sys_msg) with the list of tools (tools) available to the assistant.
 
 Finally, the prompt for the LangChain agent is updated with this new configuration, ensuring that the AI assistant operates within the specified guidelines and leverages the provided tools for its responses.
+
+## Key Considerations for building a robust AI assistant
+1. Scalabillity: 
+    - Implement Load Balancing Techniques for Optimal Performance 
+    - Use a serverless architecture (e.g., AWS Lambda, Azure Functions).
+    - Implement microservices for task-specific scaling.
+2. Cost-effectiveness:
+    - Integrate LoRa and PRMF Technologies for Enhanced Training
+    - Utilize serverless computing to pay only for actual usage.
+    - Implement caching to reduce redundant requests.
+    - Use a content delivery network (CDN) for static content.
+3. High Request Handling Capacity:
+    - Implement message queuing (e.g., Amazon SQS) for efficient request processing.
+    - Use microservices for independent scaling.
+4. Data Privacy protection & security
+    - Train open-source Large Language Model for domain specific task such as llama-2, Falcon
+    - 
+
+
+
+
+
