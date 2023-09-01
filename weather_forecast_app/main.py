@@ -11,12 +11,25 @@ app = FastAPI()
 
 # Define a request model
 class WeatherRequest(BaseModel):
+    """
+    Request model for weather forecasting.
+
+    Attributes:
+        period (int): The number of days to forecast the weather.
+    """
         
-    # latitude: float
-    # longitude: float
     period: int
 
     def data(self):
+        """
+        Fetches historical weather data from an API.
+
+        Returns:
+            DataFrame: A DataFrame containing historical weather data.
+        """
+
+
+
         end_date = datetime.now() -timedelta(days=1)
         end_date = end_date.strftime("%Y-%m-%d")
         start_date = "2023-01-10"
@@ -56,6 +69,16 @@ class WeatherRequest(BaseModel):
 @app.post("/fetch_weather/")
 async def fetch_weather(request: WeatherRequest):
 
+    """
+    Fetches weather forecasts using historical data and a machine learning model.
+
+    Args:
+        request (WeatherRequest): The request containing the forecast period.
+
+    Returns:
+        dict: A JSON response with forecasted weather data.
+    """
+
     n_future = 1
     n_past = 14
 
@@ -92,7 +115,7 @@ async def fetch_weather(request: WeatherRequest):
 
     response_data = {
         "forecast_period_dates": forecast_dates,
-        "y_pred_future": y_pred_future.tolist()  # Convert to a list for JSON serialization
+        "y_pred_future": y_pred_future.tolist() 
     }
 
     return response_data
