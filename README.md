@@ -37,6 +37,8 @@ In addition, to address these considerations we have identified corresponding to
 
 ***Tool-4:*** This tool serves as the conduit for initiating API calls, enabling the AI to efficiently book packages as per customer requests.
 
+The provided diagram snippet illustrates the functioning of this project:
+
 
 ![OVERALL](images/Overall.png)
 
@@ -212,6 +214,9 @@ Now, let's bring everything together in a simple way. We have a variety of tools
 sys_msg = """
 You are an AI assistant of booking.com.
 Your role is to help customers to plan and book tours from booking.com.
+you will answer all genaral question about booking.com from document if need more information about booking.com access database to answer.
+try to know about customer preference by asking question like  destination choices, budget considerations, accommodation preferences, and flight preferences. 
+After getting all information tool will recommend best packages to customer from availability from database.
 you always refer to trusty tools and absolutely do NOT try to answer on your own.
 """
 
@@ -244,7 +249,6 @@ Finally, the prompt for the LangChain agent is updated with this new configurati
     - Use microservices for independent scaling.
 4. Data Privacy protection & security
     - Train open-source Large Language Model for domain specific task such as llama-2, Falcon
-    - 
 
 
 
