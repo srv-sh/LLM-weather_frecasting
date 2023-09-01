@@ -6,7 +6,7 @@
 
 ## Overview
 
-Overview: An AI assistant for tour planning and booking is a software program that communicates with users naturally, understanding their preferences, making personalized tour recommendations, handling bookings, and providing customer support. It streamlines the process, saving time and effort, which enhances the overall customer experience.
+An AI assistant for tour planning and booking is a software program that communicates with users naturally, understanding their preferences, making personalized tour recommendations, handling bookings, and providing customer support. It streamlines the process, saving time and effort, which enhances the overall customer experience.
 
 Fine-tuning large language models like GPT-3 is a key approach to creating such assistants. This involves adding specific knowledge, like tour planning and booking information, to transform a general language model into a domain-specific AI assistant, making it proficient in understanding and generating content related to travel and accommodations.
 
@@ -122,7 +122,9 @@ from langchain.chains import SQLDatabaseChain
 db =SQLDatabase(engine)
 sql_chain = SQLDatabaseChain(llm= llm, database=db, verbose = True)
 
+```
 
+```
 from langchain.agents import Tool
 
 
