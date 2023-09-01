@@ -251,6 +251,11 @@ Finally, the prompt for the LangChain agent is updated with this new configurati
     - Train open-source Large Language Model for domain specific task such as llama-2, Falcon
 
 
+## Bonus Task (Optional)
+
+[Bonus Task](weather_forecast_app/README.md)
+
+
 
 
 
